@@ -1,0 +1,22 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mannycolon/timestampMicroservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mannycolon/timestampMicroservice/issues"
+  },
+  "homepage": "https://github.com/mannycolon/timestampMicroservice#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
