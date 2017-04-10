@@ -2,6 +2,8 @@ var express = require('express')
 var moment = require('moment')
 var app = express()
 
+app.set('port', process.env.PORT || 8000)
+
 function getResult(date) {
   var validDate = moment(date)
   if(validDate.isValid())
@@ -17,7 +19,7 @@ function getResult(date) {
 }
 
 app.get('/', function(req, res) {
-  res.send('Hello World! \n testing server...')
+  res.send('Hello! \n timestamp server now running...')
 })
 
 app.get('/:query', function(req, res) {
@@ -27,6 +29,6 @@ app.get('/:query', function(req, res) {
   res.json(result)
 })
 
-app.listen(process.env.PORT || 8000, function() {
-  console.log("App listening on port 8000")
+app.listen(app.get('port'), function() {
+  console.log("App listening on port " + app.get('port'))
 })
